@@ -9,7 +9,7 @@ LENGTH = len(CHARACTERS) - 1
 # Start of loop
 while(True):
     # Generate random 4 character string consisting of characters in CHARACTERS
-    USER = CHARACTERS[random.randint(0, LENGTH)] + CHARACTERS[random.randint(0, LENGTH)] + CHARACTERS[random.randint(0, LENGTH)]
+    USER = CHARACTERS[random.randint(0, LENGTH)] + CHARACTERS[random.randint(0, LENGTH)] + CHARACTERS[random.randint(0, LENGTH)] + CHARACTERS[random.randint(0, LENGTH)]
 
     # Check username availability using Reddit API
     isAvailable = requests.get("https://www.reddit.com/api/username_available.json?user=" + USER, headers={'User-agent': 'Usernamechecker4'})
